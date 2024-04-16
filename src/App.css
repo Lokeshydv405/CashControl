@@ -68,6 +68,7 @@ label{
   font-size: 1rem;
   font-family: 'Courier New', Courier, monospace;
   cursor: pointer;
+  margin-left: 0.5rem;
 }
 .App-select{
   width: 10rem;
@@ -138,4 +139,120 @@ label{
 .getsa{
   text-decoration: none;
   color: black;
+}
+.BL{
+ padding: 0 5rem 5rem 5rem;
+}
+.BL-h{
+  text-align: center;
+  font-size: 4rem;
+}
+.BL-input{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+margin-top: 2rem;
+margin-bottom: 2rem;
+}
+.BL-input input{
+  width: 15rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.BL-list{
+  padding: 3rem;
+}
+.BL-entry{
+  margin-top: 3rem;
+  margin-left: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.es{
+  color: red;
+}
+.info {
+  padding: 1rem;
+}
+.info h1, h2 {
+  color: #000000;
+}
+
+.info h1 {
+  font-size: 3em;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.info h2 {
+  font-size: 2em;
+  text-decoration: underline;
+  color: rgb(172, 14, 96);
+}
+
+.info p {
+  color: #190101;
+  line-height: 1.5;
+}
+
+
+.info b {
+  font-weight: bold;
+}
+
+
+.info em {
+  font-style: italic;
+}
+.info table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+.info th, .info td {
+  border: 2px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+.info th {
+  background-color: #a76890;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.info tbody tr:nth-child(even) {
+  background-color:#e9c7e0;
+}
+.data{
+  color: red;
+}
+.GM-h{
+  text-align: center;
+  font-size: 4rem;
+}
+.GM-g{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.GT{
+  border: 5px double black;
+  padding: 1rem;
+  width: 200vh;
+  border-radius: 20px;
+  margin: 2rem;
+}
+.GT-I{
+  display: flex;
+  margin: 1rem;
+}
+.GT-B{
+  margin: 1rem;
+}
+.GT-P{
+  margin: 1rem;
 }

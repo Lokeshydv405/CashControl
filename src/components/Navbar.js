@@ -14,25 +14,22 @@ export default function Navbar (props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className=" nav-link mx-2 mt-2" to="/home">Home</Link>
+              <Link className=" nav-link mx-2 mt-2" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className=" nav-link mx-2 mt-2" to="/Invest">Invest</Link>
+              <Link className=" nav-link mx-2 mt-2" to="/Goals">Goal Manager</Link>
             </li>
             <li className="nav-item">
-              <Link className=" nav-link mx-2 mt-2" to="/Goals">Daily Goals</Link>
+              <Link className=" nav-link mx-2 mt-2" to="/Expense">Cash Corner</Link>
             </li>
             <li className="nav-item">
-              <Link className=" nav-link mx-2 mt-2" to="/Expense">Expenses</Link>
+              <Link className=" nav-link mx-2 mt-2" to="/BorrowList">Returns</Link>
             </li>
             <li className="nav-item">
-              <Link className=" nav-link mx-2 mt-2" to="/Borrow">Borrow</Link>
+              <Link className=" nav-link mx-2 mt-2" to="/News">News Corner</Link>
             </li>
             <li className="nav-item">
-              <Link className=" nav-link mx-2 mt-2" to="/News">News</Link>
-            </li>
-            <li className="nav-item">
-              <Link className=" nav-link mx-2 mt-2 mt-2" to="/technology">Information</Link>
+              <Link className=" nav-link mx-2 mt-2 mt-2" to="/Information">Knowledge hub</Link>
             </li>
             <li className="nav-item">
               <Link className=" nav-link mx-2 mt-2 mt-2" to="/profile">Profile</Link>

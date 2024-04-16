@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
+import "../App.css";
+import { color } from 'chart.js/helpers';
 export default function Expense({ categoryData: initialCategoryData, setCategoryData }) {
   const [transactions, setTransactions] = useState(() => {
     const storedTransactions = localStorage.getItem('transactions');
@@ -35,17 +36,19 @@ export default function Expense({ categoryData: initialCategoryData, setCategory
   };
 
   const handleAddTransaction = () => {
+    const currentDate = new Date();
     const newTransaction = {
       id: Math.random(),
       amount: parseFloat(amount),
       type: type,
-      category: category
+      category: category,
+      date: currentDate.toLocaleDateString(),
+      time: currentDate.toLocaleTimeString()
     };
     if (type === "income") {
       setIncome(income + parseFloat(amount));
       setBalance(balance + parseFloat(amount));
-    }
-    else {
+    } else {
       setExpense(expense + parseFloat(amount));
       setBalance(balance - parseFloat(amount));
     }
@@ -132,10 +135,18 @@ export default function Expense({ categoryData: initialCategoryData, setCategory
       </div>
       <div className="App-E-T">
         <h3>Transaction History</h3>
-        <ol >
+        <ol>
           {transactions.map((transaction) => (
             <li key={transaction.id}>
-              {transaction.type === 'expense' ? '-' : '+'} &#8377;{transaction.amount} ({transaction.category})
+              <span className="datetime">
+                <span className="date" style={{color:'red',margin: '20px'}}>{transaction.date}</span>
+                <span className="time"style={{color:'green',margin: '20px'}}>{transaction.time}</span>
+              </span>
+              <span className="transaction-details">
+                <span>{transaction.type === 'expense' ? '-' : '+'}</span>
+                <span>&#8377;{transaction.amount}</span>
+                <span style={{margin: '20px'}}>({transaction.category})</span>
+              </span>
             </li>
           ))}
         </ol>

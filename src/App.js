@@ -6,6 +6,9 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import News from './components/News';
+import Information from './components/Information';
+import BorrowList from './components/BorrowList';
+import GoalManager from './components/GoalManager';
 // import News from './components/News';
 function App() {
   const income = parseFloat(localStorage.getItem('income')) || 0;
@@ -30,21 +33,24 @@ function App() {
     recharges: 0,
     others: 0
   };
+
   // Initialize categoryData state with initial values
   const [categoryData, setCategoryData] = useState(initialCategoryData);
   useEffect(() => {
     setCategoryData(initialCategoryData);
   }, []);
-
+  
   // Print categoryData to console
-  console.log('Category Data:', categoryData);
   return (
     <BrowserRouter>
       <div>
         <Navbar title="Cash Control" balance={balance} savings={target}/>
         <Routes>
-        <Route key ="home" exact path="/home" element={<Home data = {categoryData} try={"helllo"}/>}/>
+        <Route key ="home" exact path="/" element={<Home data = {categoryData} try={"helllo"}/>}/>
         <Route key ="profile" exact path="/profile" element={<Profile initialProfile={initialProfile}/>}/>
+        <Route key ="BorrowList" exact path="/BorrowList" element={<BorrowList/>}/>/* Add the BorrowList route here */
+        <Route key ="Information" exact path="/Information" element={<Information/>}/>
+        <Route key ="goals" exact path="/Goals" element={<GoalManager/>}/>
         <Route key ="news" exact path="/News" element={<News apikey={'b0c302d98eeb469a85f923e468fa3344'} topic="Finance related" pagesize={8} country="in" cat="business" />}/>
         <Route key ="general" exact path="/Expense" element={<Expense 
                 initialIncome={income}
